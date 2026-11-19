@@ -2126,3 +2126,19 @@ td {
 }
 
 }
+
+/* Add New Admin - Bigger Email Input */
+.settings-card form .form-group input[type="email"] {
+  width: 100%;
+  min-height: 55px;
+  padding: 15px 18px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Make the input section wider */
+.settings-card form .form-group {
+  width: 100%;
+  max-width: 650px;
+}

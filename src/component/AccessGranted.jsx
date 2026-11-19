@@ -40,7 +40,7 @@ function AccessGranted() {
 
           <div className="info-box">
             <small>Confidence Score</small>
-            <h3 className="green">99.8%</h3>
+            <h3 className="green">89% Accurate</h3>
           </div>
 
           <div className="info-box">
