@@ -9,21 +9,25 @@ import { FiHelpCircle, FiLogOut } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/Image1.jpg";
 
-
 function Sidebar() {
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("user");
+    navigate("/");
+  };
 
   return (
     <div className="sidebar">
       <div>
         <div className="sidebar-logo">
-  <img src={Image1} alt="Image1" className="sidebar-logo-img" />
+          <img src={Image1} alt="Image1" className="sidebar-logo-img" />
 
-  <div>
-    <h2>Real-Time Face</h2>
-    <p>Liveness Detection For Secure Authentication</p>
-  </div>
-</div>
+          <div>
+            <h2>Real-Time Face</h2>
+            <p>Liveness Detection For Secure Authentication</p>
+          </div>
+        </div>
 
         <button className="quick-btn">
           <FaFingerprint />
@@ -39,13 +43,13 @@ function Sidebar() {
             Dashboard
           </div>
 
-         <div
-  className="menu-item"
-  onClick={() => navigate("/capture")}
->
-  <span>📷</span>
-  <p>Live Capture</p>
-</div>
+          <div
+            className="menu-item"
+            onClick={() => navigate("/capture")}
+          >
+            <span>📷</span>
+            <p>Live Capture</p>
+          </div>
 
           <div
             className="menu-item"
@@ -56,20 +60,20 @@ function Sidebar() {
           </div>
 
           <div
-  className="menu-item"
-  onClick={() => navigate("/admin")}
->
-  <FaUserShield />
-  Admin
-</div>
+            className="menu-item"
+            onClick={() => navigate("/admin")}
+          >
+            <FaUserShield />
+            Admin
+          </div>
 
           <div
-  className="menu-item"
-  onClick={() => navigate("/settings")}
->
-  <HiOutlineCog6Tooth />
-  Settings
-</div>
+            className="menu-item"
+            onClick={() => navigate("/settings")}
+          >
+            <HiOutlineCog6Tooth />
+            Settings
+          </div>
         </div>
       </div>
 
@@ -79,10 +83,7 @@ function Sidebar() {
           Help Center
         </div>
 
-        <div
-          className="menu-item"
-          onClick={() => navigate("/")}
-        >
+        <div className="menu-item" onClick={handleLogout}>
           <FiLogOut />
           Logout
         </div>
