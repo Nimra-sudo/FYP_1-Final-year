@@ -14,6 +14,7 @@ function Sidebar() {
 
   const handleLogout = () => {
     sessionStorage.removeItem("user");
+    sessionStorage.removeItem("token");
     navigate("/");
   };
 

@@ -100,6 +100,7 @@ function Login() {
 
       // Store basic user details for the UI
       sessionStorage.setItem("user", JSON.stringify(data.user));
+      sessionStorage.setItem("token", data.token);
 
       navigate("/dashboard");
     } catch (error) {

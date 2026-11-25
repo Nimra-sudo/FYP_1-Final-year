@@ -26,9 +26,8 @@ function Setting() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Bearer ${sessionStorage.getItem("token")}`,
           },
-          // Change this to match your backend authentication method.
-          credentials: "include",
           body: JSON.stringify({
             email: adminEmail.trim(),
           }),
